@@ -1,3 +1,5 @@
+package test.java.com.game.components;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;

@@ -1,4 +1,4 @@
-import org.w3c.dom.ls.LSOutput;
+package main.java.com.game.components;
 
 public class Die {
     int diceNumber;

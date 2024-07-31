@@ -1,4 +1,5 @@
-package com.game.utilities;
+package main.java.com.game.utilities;
 
-enum TeamColor {
+public enum TeamColor {
+    RED, YELLOW, BLUE, GREEN
 }
