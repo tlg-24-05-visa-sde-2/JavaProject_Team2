@@ -1,5 +1,6 @@
 package test.java.com.game.components;
 
+import main.java.com.game.components.Die;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;

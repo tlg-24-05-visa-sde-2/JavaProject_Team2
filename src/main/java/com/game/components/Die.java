@@ -3,7 +3,7 @@ package main.java.com.game.components;
 public class Die {
     int diceNumber;
 
-    int rollDice(){
+    public int rollDice(){
         return diceNumber = (int)(Math.random()*6)+1;
     }
 
