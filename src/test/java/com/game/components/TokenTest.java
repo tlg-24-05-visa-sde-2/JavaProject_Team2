@@ -1,4 +1,4 @@
-package test.java.com.game.components;
+package com.game.components;
 
 import org.junit.Test;
 

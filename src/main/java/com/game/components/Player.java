@@ -1,10 +1,9 @@
-package main.java.com.game.components;
+package com.game.components;
 
 public class Player {
     String name;
     int ranking;
     boolean win = false;
-
 
     public Player(String name){
         this.name = name;
