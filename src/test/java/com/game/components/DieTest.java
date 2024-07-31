@@ -1,12 +1,11 @@
-package test.java.com.game.components;
+package com.game.components;
 
-import main.java.com.game.components.Die;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import static org.junit.Assert.assertTrue;
 
 public class DieTest {
-    Die die = new Die();
+    main.java.com.game.components.Die die = new Die();
 
     @Test
     public void testRollDice(){
