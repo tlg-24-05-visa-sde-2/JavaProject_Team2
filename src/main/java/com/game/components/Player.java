@@ -1,4 +1,4 @@
-package main.java.com.game.components;
+package com.game.components;
 
 public class Player {
     String name;

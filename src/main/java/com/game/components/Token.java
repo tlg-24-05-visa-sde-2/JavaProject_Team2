@@ -1,6 +1,6 @@
-package main.java.com.game.components;
+package com.game.components;
 
-import main.java.com.game.utilities.TeamColor;
+import com.game.utilities.TeamColor;
 
 public class Token {
     boolean teamSafeSpace;
