@@ -1,8 +1,9 @@
-package test.java.com.game.components;
+package com.game.components;
 
+import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.assertTrue;
+
 
 public class DieTest {
     Die die = new Die();
