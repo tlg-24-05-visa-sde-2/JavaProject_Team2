@@ -1,8 +1,11 @@
 package com.game.components;
+<<<<<<< HEAD
 
 import com.game.utilities.TeamColor;
 
 import java.util.Arrays;
+=======
+>>>>>>> 6d5537e29b83bd3a48d0f3e60eb7116f65dd2b17
 
 public class Player {
     private String name;
