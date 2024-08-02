@@ -1,12 +1,21 @@
 package com.game.components;
 
-public class Player {
-    String name;
-    int ranking;
-    boolean win = false;
+import com.game.utilities.TeamColor;
 
-    public Player(String name){
+import java.util.Arrays;
+
+public class Player {
+    private String name;
+    public TeamColor playerColor;
+    public TeamColor tokenTeamColor;
+    int ranking;
+    private boolean win = false;
+    boolean teamSafeSpace;
+
+    public Player(String name, TeamColor tokenTeamColor){
         this.name = name;
+        this.playerColor = tokenTeamColor;
+        this.tokenTeamColor = tokenTeamColor;
     }
 
     public void win(){
@@ -21,6 +30,14 @@ public class Player {
         return name;
     }
 
+    public TeamColor getPlayerColor() {
+        return playerColor;
+    }
+
+    public TeamColor getTokenTeamColor() {
+        return tokenTeamColor;
+    }
+
     public int getRanking() {
         return ranking;
     }
@@ -30,6 +47,7 @@ public class Player {
     }
 
     public String toString(){
-        return "Player: name is: " + name + "\nranking is " + ranking;
+        return "Player: name is: " + name + "\nplayerColor is: " + playerColor;
     }
+
 }

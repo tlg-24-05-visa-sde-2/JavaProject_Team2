@@ -7,7 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 class LudoApp {
     public static void main(String[] args) {
 
-        GameController.execute();
+//        GameController.execute();
         System.out.println("hello world");
+
     }
 }
