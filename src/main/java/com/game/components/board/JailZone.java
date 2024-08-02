@@ -1,4 +1,4 @@
-package com.game.components;
+package com.game.components.board;
 
 import com.game.utilities.TeamColor;
 
