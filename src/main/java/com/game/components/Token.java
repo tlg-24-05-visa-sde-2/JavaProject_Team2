@@ -89,32 +89,32 @@ public class Token {
             updateTokenPosition(tokenId, newX, newY);
 
             // Check if the new position matches player2's token position and send them to jail
-            if (positions.get(tokenId).equals(opponentPlayer.token.positions.get("token1"))) {
-                opponentPlayer.token.goToJail("token1");
-            }
-            else if (positions.get(tokenId).equals(opponentPlayer.token.positions.get("token2"))) {
-                opponentPlayer.token.goToJail("token2");
-            }
-            else if (safeZone.containsKey(tokenTeamColor)) {
-                Map<String, Integer> currentPosition = positions.get(tokenId); // gets current token position
-                int currX = currentPosition.get("x");
-                int currY = currentPosition.get("y");
-
-                while(!teamSafeSpace) {
-                    // gets safezone coordinates for token color and iterates over to see
-                    // if any safe zone coordinates match curr position call changeDirection()
-                    List<Map<String, Integer>> teamColorSafeZones = safeZone.get(tokenTeamColor);
-                    for (Map<String, Integer> safeZonePosition : teamColorSafeZones) {
-                        int safeX = safeZonePosition.get("x");
-                        int safeY = safeZonePosition.get("y");
-                        if (currX == safeX && currY == safeY) {
-                            teamSafeSpace = true;
-                            changeDirection(tokenId, movesLeft, position);
-                            return;
-                        }
-                    }
-                }
-            }
+//            if (positions.get(tokenId).equals(opponentPlayer.token.positions.get("token1"))) {
+//                opponentPlayer.token.goToJail("token1");
+//            }
+//            else if (positions.get(tokenId).equals(opponentPlayer.token.positions.get("token2"))) {
+//                opponentPlayer.token.goToJail("token2");
+//            }
+//            else if (safeZone.containsKey(tokenTeamColor)) {
+//                Map<String, Integer> currentPosition = positions.get(tokenId); // gets current token position
+//                int currX = currentPosition.get("x");
+//                int currY = currentPosition.get("y");
+//
+//                while(!teamSafeSpace) {
+//                    // gets safezone coordinates for token color and iterates over to see
+//                    // if any safe zone coordinates match curr position call changeDirection()
+//                    List<Map<String, Integer>> teamColorSafeZones = safeZone.get(tokenTeamColor);
+//                    for (Map<String, Integer> safeZonePosition : teamColorSafeZones) {
+//                        int safeX = safeZonePosition.get("x");
+//                        int safeY = safeZonePosition.get("y");
+//                        if (currX == safeX && currY == safeY) {
+//                            teamSafeSpace = true;
+//                            changeDirection(tokenId, movesLeft, position);
+//                            return;
+//                        }
+//                    }
+//                }
+//            }
         }
     }
 
