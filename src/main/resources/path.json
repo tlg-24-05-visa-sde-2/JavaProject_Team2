@@ -1,0 +1,851 @@
+[
+  {
+    "teamColor": "TeamColor.RED",
+    "startingPosition": {
+      "x_axis": 6,
+      "y_axis": 13
+    },
+    "triggerZone": {
+      "x_axis": 7,
+      "y_axis": 14
+    },
+    "homeZone": {"x_axis": 7, "y_axis": 8},
+
+    "safeZone":
+  [
+    {"x_axis": 7, "y_axis": 14},
+    {"x_axis": 6, "y_axis": 14},
+    {"x_axis": 7, "y_axis": 13},
+    {"x_axis": 7, "y_axis": 12},
+    {"x_axis": 7, "y_axis": 11},
+    {"x_axis": 7, "y_axis": 10},
+    {"x_axis": 7, "y_axis": 9}
+  ],
+    "trackPath": [
+      {
+        "x_axis": 6,
+        "y_axis": 12
+      },
+      {
+        "x_axis": 6,
+        "y_axis": 11
+      },
+      {
+        "x_axis": 6,
+        "y_axis": 10
+      },
+      {
+        "x_axis": 6,
+        "y_axis": 9
+      },
+      {
+        "x_axis": 5,
+        "y_axis": 8
+      },
+      {
+        "x_axis": 4,
+        "y_axis": 8
+      },
+      {
+        "x_axis": 3,
+        "y_axis": 8
+      },
+      {
+        "x_axis": 2,
+        "y_axis": 8
+      },
+      {
+        "x_axis": 1,
+        "y_axis": 8
+      },
+      {
+        "x_axis": 0,
+        "y_axis": 8
+      },
+      {
+        "x_axis": 0,
+        "y_axis": 7
+      },
+      {
+        "x_axis": 0,
+        "y_axis": 6
+      },
+      {
+        "x_axis": 2,
+        "y_axis": 6
+      },
+      {
+        "x_axis": 3,
+        "y_axis": 6
+      },
+      {
+        "x_axis": 4,
+        "y_axis": 6
+      },
+      {
+        "x_axis": 5,
+        "y_axis": 6
+      },
+      {
+        "x_axis": 6,
+        "y_axis": 5
+      },
+      {
+        "x_axis": 6,
+        "y_axis": 4
+      },
+      {
+        "x_axis": 6,
+        "y_axis": 3
+      },
+      {
+        "x_axis": 6,
+        "y_axis": 2
+      },
+      {
+        "x_axis": 6,
+        "y_axis": 1
+      },
+      {
+        "x_axis": 6,
+        "y_axis": 0
+      },
+      {
+        "x_axis": 7,
+        "y_axis": 0
+      },
+      {
+        "x_axis": 8,
+        "y_axis": 0
+      },
+      {
+        "x_axis": 8,
+        "y_axis": 2
+      },
+      {
+        "x_axis": 8,
+        "y_axis": 3
+      },
+      {
+        "x_axis": 8,
+        "y_axis": 4
+      },
+      {
+        "x_axis": 8,
+        "y_axis": 5
+      },
+      {
+        "x_axis": 9,
+        "y_axis": 6
+      },
+      {
+        "x_axis": 10,
+        "y_axis": 6
+      },
+      {
+        "x_axis": 11,
+        "y_axis": 6
+      },
+      {
+        "x_axis": 12,
+        "y_axis": 6
+      },
+      {
+        "x_axis": 13,
+        "y_axis": 6
+      },
+      {
+        "x_axis": 14,
+        "y_axis": 6
+      },
+      {
+        "x_axis": 14,
+        "y_axis": 7
+      },
+      {
+        "x_axis": 14,
+        "y_axis": 8
+      },
+      {
+        "x_axis": 12,
+        "y_axis": 8
+      },
+      {
+        "x_axis": 11,
+        "y_axis": 8
+      },
+      {
+        "x_axis": 10,
+        "y_axis": 8
+      },
+      {
+        "x_axis": 9,
+        "y_axis": 8
+      },
+      {
+        "x_axis": 8,
+        "y_axis": 9
+      },
+      {
+        "x_axis": 8,
+        "y_axis": 10
+      },
+      {
+        "x_axis": 8,
+        "y_axis": 11
+      },
+      {
+        "x_axis": 8,
+        "y_axis": 12
+      },
+      {
+        "x_axis": 8,
+        "y_axis": 13
+      },
+      {
+        "x_axis": 8,
+        "y_axis": 14
+      },
+      {
+        "x_axis": 7,
+        "y_axis": 14
+      },
+      {
+        "x_axis": 6,
+        "y_axis": 14
+      }
+    ]
+  },
+
+  {
+  "teamColor": "TeamColor.YELLOW",
+  "startingPosition": {
+    "x_axis": 8,
+    "y_axis": 1
+  },
+  "triggerZone": {
+    "x_axis": 7,
+    "y_axis": 0
+  },
+  "homeZone": {"x_axis": 7, "y_axis": 6},
+
+  "safeZone":
+  [
+    {"x_axis": 7, "y_axis": 1},
+    {"x_axis": 7, "y_axis": 2},
+    {"x_axis": 7, "y_axis": 3},
+    {"x_axis": 7, "y_axis": 4},
+    {"x_axis": 7, "y_axis": 5}
+  ],
+  "trackPath": [
+    {
+      "x_axis": 8,
+      "y_axis": 2
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 3
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 4
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 5
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 7
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 9
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 10
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 11
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 12
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 13
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 14
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 14
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 14
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 12
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 11
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 10
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 9
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 1,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 0,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 0,
+      "y_axis": 7
+    },
+    {
+      "x_axis": 0,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 5
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 4
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 3
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 2
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 1
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 0
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 0
+    }
+  ]
+},
+
+  {
+  "teamColor": "TeamColor.GREEN",
+  "startingPosition": {
+    "x_axis": 1,
+    "y_axis": 6
+  },
+  "triggerZone": {
+    "x_axis": 0,
+    "y_axis": 7
+  },
+  "homeZone": {"x_axis": 6, "y_axis": 7},
+
+  "safeZone":
+  [
+    {"x_axis": 1, "y_axis": 7},
+    {"x_axis": 2, "y_axis": 7},
+    {"x_axis": 3, "y_axis": 7},
+    {"x_axis": 4, "y_axis": 7},
+    {"x_axis": 5, "y_axis": 7}
+  ],
+  "trackPath": [
+    {
+      "x_axis": 2,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 5
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 4
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 3
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 2
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 1
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 0
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 0
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 0
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 2
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 3
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 4
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 5
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 7
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 9
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 10
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 11
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 12
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 13
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 14
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 14
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 14
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 12
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 11
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 10
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 9
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 1,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 0,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 0,
+      "y_axis": 7
+    }
+   ]
+},
+
+  {
+  "teamColor": "TeamColor.BLUE",
+  "startingPosition": {
+    "x_axis": 13,
+    "y_axis": 8
+  },
+  "triggerZone": {
+    "x_axis": 14,
+    "y_axis": 7
+  },
+  "homeZone": {"x_axis": 8, "y_axis": 7},
+
+  "safeZone":
+  [
+    {"x_axis": 13, "y_axis": 7},
+    {"x_axis": 12, "y_axis": 7},
+    {"x_axis": 11, "y_axis": 7},
+    {"x_axis": 10, "y_axis": 7},
+    {"x_axis": 9, "y_axis": 7}
+  ],
+  "trackPath": [
+    {
+      "x_axis": 12,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 9
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 10
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 11
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 12
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 13
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 14
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 14
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 14
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 12
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 11
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 10
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 9
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 1,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 0,
+      "y_axis": 8
+    },
+    {
+      "x_axis": 0,
+      "y_axis": 7
+    },
+    {
+      "x_axis": 0,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 5
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 4
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 3
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 2
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 1
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 0
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 0
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 0
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 2
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 3
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 4
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 5
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 6
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 7
+    }
+  ]
+}
+]
