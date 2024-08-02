@@ -1,11 +1,25 @@
 package com.game.components;
 
+import com.game.components.board.Tile;
 import com.game.utilities.TeamColor;
 
 public class Token {
     boolean teamSafeSpace;
     public TeamColor tokenTeamColor;
-    int currentTokenLocation; // store current token location for player
+    private Tile currentTokenLocationOnTile;
+    //int currentTokenLocation; // store current token location for player
+
+    //AB:
+    //accessor method for currentLocation using Tile class
+
+
+    public Tile getCurrentTokenLocationOnTile() {
+        return currentTokenLocationOnTile;
+    }
+
+    public void setCurrentTokenLocation(Tile currentTokenLocationOnTile) {
+        this.currentTokenLocationOnTile = currentTokenLocationOnTile;
+    }
 
     public void moveForward(int die){
         //TODO recognize white space move number of spaces equal to die roll

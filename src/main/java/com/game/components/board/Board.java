@@ -1,4 +1,4 @@
-package com.game.components;
+package com.game.components.board;
 
 import java.util.List;
 
@@ -7,14 +7,14 @@ class Board {
     private List<SafeZone> safeZones;
     private List<JailZone> jailZones;
     private List<HomeZone> homeZones;
-    private List<WhiteSpace> whiteSpaces;
+    private List<Path> paths;
 
     //constructor
-    public Board(List<SafeZone> safeZones, List<JailZone> jailZones, List<HomeZone> homeZones, List<WhiteSpace> whiteSpaces) {
+    public Board(List<SafeZone> safeZones, List<JailZone> jailZones, List<HomeZone> homeZones, List<Path> paths) {
         this.safeZones = safeZones;
         this.jailZones = jailZones;
         this.homeZones = homeZones;
-        this.whiteSpaces = whiteSpaces;
+        this.paths = paths;
     }
 
     //accessors
@@ -44,11 +44,11 @@ class Board {
         this.homeZones = homeZones;
     }
 
-    public List<WhiteSpace> getWhiteSpaces() {
-        return whiteSpaces;
+    public List<Path> getWhiteSpaces() {
+        return paths;
     }
 
-    public void setWhiteSpaces(List<WhiteSpace> whiteSpaces) {
-        this.whiteSpaces = whiteSpaces;
+    public void setWhiteSpaces(List<Path> paths) {
+        this.paths = paths;
     }
 }

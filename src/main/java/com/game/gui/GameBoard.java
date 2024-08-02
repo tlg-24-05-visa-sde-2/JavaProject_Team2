@@ -31,7 +31,7 @@ public class GameBoard extends Pane {
         for (int i = 0; i < BOARD_SIZE; i++) {
             for (int j = 0; j < BOARD_SIZE; j++) {
                 StackPane tile = new StackPane();
-                //tile.setStyle("-fx-border-color: black; -fx-background-color: rgba(255, 255, 255, 0.1);");
+                tile.setStyle("-fx-border-color: black; -fx-background-color: rgba(255, 255, 255, 0.1);");
                 tile.setPrefSize(TILE_SIZE, TILE_SIZE);
                 tile.setLayoutX(i * TILE_SIZE);
                 tile.setLayoutY(j * TILE_SIZE);
