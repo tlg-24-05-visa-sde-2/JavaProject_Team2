@@ -1,5 +1,7 @@
 package com.game.components.player;
 
+import com.game.utilities.TeamColor;
+
 public class Player {
     private String name;
     public TeamColor playerColor;

@@ -1,9 +1,7 @@
 package com.game.components;
-<<<<<<< HEAD
+
 
 import java.util.Arrays;
-=======
->>>>>>> 6d5537e29b83bd3a48d0f3e60eb7116f65dd2b17
 
 public class Die {
     int sixCount = 0;

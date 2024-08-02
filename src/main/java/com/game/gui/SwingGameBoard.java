@@ -57,7 +57,7 @@ public class SwingGameBoard extends JPanel {
 
     private void handleGridClick(int x, int y) {
         // Handle the grid click at (x, y)
-        System.out.println("Grid clicked at: (" + x + ", " + y + ")");
+        System.out.printf("{\"x_axis\": %d, \"y_axis\": %d}%n", x, y);
         //
     }
 }
