@@ -1,4 +1,4 @@
-package com.game.components;
+package test.java.com.game.components;
 
 import static org.junit.jupiter.api.Assertions.*;
 
