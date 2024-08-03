@@ -1,5 +1,6 @@
 package com.game.components;
 
+
 import java.util.Arrays;
 
 public class Die {

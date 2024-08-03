@@ -1,5 +1,7 @@
 package com.game.components;
 
+import com.game.components.board.Tile;
+import com.game.components.player.Player;
 import com.game.utilities.TeamColor;
 
 import java.util.ArrayList;
@@ -137,6 +139,20 @@ public class Token {
                 }
             }
         }
+    }
+    private Tile currentTokenLocationOnTile;
+    //int currentTokenLocation; // store current token location for player
+
+    //AB:
+    //accessor method for currentLocation using Tile class
+
+
+    public Tile getCurrentTokenLocationOnTile() {
+        return currentTokenLocationOnTile;
+    }
+
+    public void setCurrentTokenLocation(Tile currentTokenLocationOnTile) {
+        this.currentTokenLocationOnTile = currentTokenLocationOnTile;
     }
 
     public void goToJail(String tokenId) {

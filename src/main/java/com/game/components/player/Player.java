@@ -1,8 +1,7 @@
-package com.game.components;
+package com.game.components.player;
 
+import com.game.components.Token;
 import com.game.utilities.TeamColor;
-
-import java.util.Arrays;
 
 public class Player {
     private String name;

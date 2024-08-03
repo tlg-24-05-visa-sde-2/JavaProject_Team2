@@ -1,12 +1,11 @@
 package com.game.components;
 
+import java.util.Arrays;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import static org.springframework.test.util.AssertionErrors.assertTrue;
 
-import java.util.Arrays;
-
-import static org.testng.AssertJUnit.assertTrue;
 
 public class DieTest {
     private Die die;
@@ -47,3 +46,4 @@ public class DieTest {
         assertTrue("toString should contain 'die rolls: '", result.contains("die rolls: "));
     }
 }
+

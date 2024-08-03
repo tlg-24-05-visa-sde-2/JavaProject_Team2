@@ -1,5 +1,6 @@
 package com.game.components;
 
+import com.game.components.player.Player;
 import com.game.utilities.TeamColor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
