@@ -1,28 +1,22 @@
 package com.game.components;
 
-<<<<<<< HEAD
-import org.junit.Before;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
-=======
->>>>>>> 6d5537e29b83bd3a48d0f3e60eb7116f65dd2b17
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
+import static org.testng.AssertJUnit.assertTrue;
 
 public class DieTest {
     private Die die;
 
-    @Before
+    @BeforeClass
     public void setUp() {
         die = new Die();
     }
 
     @Test
-<<<<<<< HEAD
     public void testRollDice() {
         int lastRoll = die.rollDice();
         assertTrue("Last roll should be between 1 and 6", lastRoll >= 1 && lastRoll <= 6);
@@ -51,11 +45,5 @@ public class DieTest {
         String result = die.toString();
         assertTrue("toString should contain 'Die: last roll outcome was: '", result.contains("Die: last roll outcome was: "));
         assertTrue("toString should contain 'die rolls: '", result.contains("die rolls: "));
-=======
-    public void testRollDice(){
-        int result = die.rollDice();
-        System.out.println(die);
-        Assert.assertTrue( result >= 1 && result <= 6, "Roll result should be between 1 and 6");
->>>>>>> 6d5537e29b83bd3a48d0f3e60eb7116f65dd2b17
     }
 }
