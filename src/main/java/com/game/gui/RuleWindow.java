@@ -43,5 +43,7 @@ class RuleWindow extends JFrame {
         panel.setLayout(new BorderLayout());
         panel.add(rulesLabel, BorderLayout.CENTER);
         panel.add(playBtn, BorderLayout.SOUTH);
+
+        this.getContentPane().add(panel).setBackground(new Color(100, 197, 255));
     }
 }
