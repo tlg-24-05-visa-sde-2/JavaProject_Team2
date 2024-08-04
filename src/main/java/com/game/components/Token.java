@@ -90,6 +90,8 @@ public class Token {
         // this checks if position of token is at jail zone then update token to starting square
         if(x == 0 && y == 0) {
             updateTokenPosition(tokenId, 0, 0);// input starting square here
+            x = position.get("x");  // reset x & y coordinate to starting square coordinates before movement
+            y = position.get("y");
         }
 
         for (int i = 1; i <= die; i++) {

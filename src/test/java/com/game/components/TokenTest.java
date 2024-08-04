@@ -30,7 +30,7 @@ public class TokenTest {
     }
 
     @Disabled
-    @Test
+    @Test // not really sure how to test this part without interacting with the board
     public void testMoveForward() {
         currentPlayer.token.moveForward("token1", 5, currentPlayer, opponentPlayer);
         Map<String, Integer> position = token.getTokenPosition("token1");
@@ -39,9 +39,9 @@ public class TokenTest {
 
     @Test
     public void testGoToJail() {
-        currentPlayer.token.goToJail("token1");
+        opponentPlayer.token.goToJail("token1");
         Map<String, Integer> position = currentPlayer.token.getTokenPosition("token1");
-        assertEquals(0, position.get("x"));
+        assertEquals(0, position.get("x")); // should work as x and y get reset to zero zero
         assertEquals(0, position.get("y"));
     }
 
@@ -50,12 +50,15 @@ public class TokenTest {
         // move towards safe zone
         currentPlayer.token.changeDirection("token1", 2, currentPlayer.token.getTokenPosition("token1"));
         Map<String, Integer> position = currentPlayer.token.getTokenPosition("token1");
-        assertEquals(1, position.get("y"));  // Adjust based on actual changeDirection logic
+        assertEquals(1, position.get("y"));  // Adjust based on actual changeDirection logic in change direction method
     }
 
     @Test
-    public void testGoHome() {
+    public void testGoHome_whenTokenPassAsArgument_shouldIncrementTokenInHomeByOne() {
         currentPlayer.token.goHome("token1");
+        assertEquals(1, currentPlayer.token.tokenInHome, "Token in home should be incremented to 1");
 
+        currentPlayer.token.goHome("token1");
+        assertEquals(2, currentPlayer.token.tokenInHome, "Token in home should be incremented to 2");
     }
 }
