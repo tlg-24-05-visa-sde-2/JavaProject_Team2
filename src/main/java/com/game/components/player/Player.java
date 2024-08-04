@@ -11,6 +11,12 @@ public class Player {
     private boolean win = false;
 
     public Player(String name, TeamColor tokenTeamColor){
+        if (name == null || name.trim() == "") {
+            throw new IllegalArgumentException("Player name cannot be null or empty");
+        }
+        if (tokenTeamColor == null || !isValidTeamColor(tokenTeamColor)) {
+            throw new IllegalArgumentException("Invalid team color: " + tokenTeamColor + "\n valid options are " + TeamColor.values());
+        }
         this.name = name;
         this.playerColor = tokenTeamColor;
         this.tokenTeamColor = tokenTeamColor;
@@ -18,6 +24,7 @@ public class Player {
     }
 
     public void win(){
+        win = true;
         /*
          * call the gui method to display winner here
          */
@@ -33,6 +40,15 @@ public class Player {
 
     public TeamColor getTokenTeamColor() {
         return tokenTeamColor;
+    }
+
+    private boolean isValidTeamColor(TeamColor teamColor) {
+        for (TeamColor color : TeamColor.values()) {
+            if (color == teamColor) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public String toString(){
