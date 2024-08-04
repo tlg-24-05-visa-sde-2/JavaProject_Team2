@@ -9,18 +9,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public class Token {
+    private Player player;
     boolean teamSafeSpace = false;
     public TeamColor tokenTeamColor;
     public Map<String, Map<String, Integer>> positions; // store current token location for player
     private Map<TeamColor, List<Map<String, Integer>>> safeZone;
+    private Map<String, Map<String, Integer>> homeZone;
+    public int tokenInHome = 0;
 
     // constructor that takes requires Team color
-    public Token(TeamColor tokenTeamColor) {
+    public Token(Player player, TeamColor tokenTeamColor) {
+        this.player = player;
         this.tokenTeamColor = tokenTeamColor;
         this.positions = new HashMap<>();
         this.safeZone = new HashMap<>();
+        this.homeZone = new HashMap<>();
+        addHomeZone("home", 20, 20); //replace with team color home zone coordinates
 
         // Initialize two tokens at 0,0
         addToken("token1", 0, 0);
@@ -82,6 +87,13 @@ public class Token {
         int x = position.get("x");  // gets current position of token
         int y = position.get("y");
 
+        // this checks if position of token is at jail zone then update token to starting square
+        if(x == 0 && y == 0) {
+            updateTokenPosition(tokenId, 0, 0);// input starting square here
+            x = position.get("x");  // reset x & y coordinate to starting square coordinates before movement
+            y = position.get("y");
+        }
+
         for (int i = 1; i <= die; i++) {
             // moving the token
             int newX = x;
@@ -92,32 +104,42 @@ public class Token {
             updateTokenPosition(tokenId, newX, newY);
 
             // Check if the new position matches player2's token position and send them to jail
-//            if (positions.get(tokenId).equals(opponentPlayer.token.positions.get("token1"))) {
-//                opponentPlayer.token.goToJail("token1");
-//            }
-//            else if (positions.get(tokenId).equals(opponentPlayer.token.positions.get("token2"))) {
-//                opponentPlayer.token.goToJail("token2");
-//            }
-//            else if (safeZone.containsKey(tokenTeamColor)) {
-//                Map<String, Integer> currentPosition = positions.get(tokenId); // gets current token position
-//                int currX = currentPosition.get("x");
-//                int currY = currentPosition.get("y");
-//
-//                while(!teamSafeSpace) {
-//                    // gets safezone coordinates for token color and iterates over to see
-//                    // if any safe zone coordinates match curr position call changeDirection()
-//                    List<Map<String, Integer>> teamColorSafeZones = safeZone.get(tokenTeamColor);
-//                    for (Map<String, Integer> safeZonePosition : teamColorSafeZones) {
-//                        int safeX = safeZonePosition.get("x");
-//                        int safeY = safeZonePosition.get("y");
-//                        if (currX == safeX && currY == safeY) {
-//                            teamSafeSpace = true;
-//                            changeDirection(tokenId, movesLeft, position);
-//                            return;
-//                        }
-//                    }
-//                }
-//            }
+            if (positions.get(tokenId).equals(opponentPlayer.token.positions.get("token1"))) {
+                opponentPlayer.token.goToJail("token1");
+            }
+            else if (positions.get(tokenId).equals(opponentPlayer.token.positions.get("token2"))) {
+                opponentPlayer.token.goToJail("token2");
+            }
+            else if (safeZone.containsKey(tokenTeamColor)) {
+                Map<String, Integer> currentPosition = positions.get(tokenId); // gets current token position
+                int currX = currentPosition.get("x");
+                int currY = currentPosition.get("y");
+
+                if (homeZone.containsKey("home")) {
+                    Map<String, Integer> homePosition = homeZone.get("home");
+                    int homeX = homePosition.get("x");
+                    int homeY = homePosition.get("y");
+                    if (newX == homeX && newY == homeY) {
+                        goHome(tokenId);
+                        return;
+                    }
+                }
+
+                while(!teamSafeSpace) {
+                    // gets safezone coordinates for token color and iterates over to see
+                    // if any safe zone coordinates match curr position call changeDirection()
+                    List<Map<String, Integer>> teamColorSafeZones = safeZone.get(tokenTeamColor);
+                    for (Map<String, Integer> safeZonePosition : teamColorSafeZones) {
+                        int safeX = safeZonePosition.get("x");
+                        int safeY = safeZonePosition.get("y");
+                        if (currX == safeX && currY == safeY) {
+                            teamSafeSpace = true;
+                            changeDirection(tokenId, movesLeft, position);
+                            return;
+                        }
+                    }
+                }
+            }
         }
     }
     private Tile currentTokenLocationOnTile;
@@ -151,19 +173,28 @@ public class Token {
          updateTokenPosition(tokenId, newX, newY);
     }
 
-    public void goHome(){
+    public void goHome(String tokenId){
         //TODO move token piece to safe zone
-        /*
-         *  IF condition: space == teamSafeSpace
-         *      {move forward}
-         */
+        //the token should be in home zone already,
+        //this method will just change status of something keeping track of tokens in homeZone
+        tokenInHome ++;
+        if (tokenInHome == 2) {
+            player.win();
+        }
     }
 
-    private void addToken(String tokenId, int x, int y) { // Creates map for x and y coordinate to map under tokenX
+    public void addToken(String tokenId, int x, int y) { // Creates map for x and y coordinate to map under tokenX
         Map<String, Integer> position = new HashMap<>();
         position.put("x", x);
         position.put("y", y);
         positions.put(tokenId, position);
+    }
+
+    private void addHomeZone(String zoneId, int x, int y) {
+        Map<String, Integer> position = new HashMap<>();
+        position.put("x", x);
+        position.put("y", y);
+        homeZone.put(zoneId, position);
     }
 
     // update the position of a token

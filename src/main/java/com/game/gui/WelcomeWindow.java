@@ -19,6 +19,7 @@ public class WelcomeWindow extends JFrame implements ActionListener {
         playBtn.setBounds(400, 320, 100, 50);
         playBtn.addActionListener(this);
 
+
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new FlowLayout());
         buttonPanel.add(playBtn);
