@@ -1,5 +1,6 @@
 package com.game.components.board;
 
+import java.nio.file.Path;
 import java.util.List;
 
 class Board {
