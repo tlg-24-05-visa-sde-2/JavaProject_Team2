@@ -1,11 +1,12 @@
-package com.game.components.player;
+package com.game.components;
 
+import com.game.components.player.Player;
 import com.game.utilities.TeamColor;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PlayerTest {
+class wPlayerTest {
 
     @Test
     public void testPlayerConstructorWithValidParameters() { // Verify the player's name and color

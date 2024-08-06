@@ -1,9 +1,10 @@
 package com.game.client;
 
 import com.game.gui.SwingGameBoard;
+import com.game.gui.WelcomeWindow;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import javafx.application.Application;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,11 +13,14 @@ import java.awt.*;
 public class LudoApp {
 
     public static void main(String[] args) {
+
         System.setProperty("java.awt.headless", "false");
         System.out.println("java.awt.headless: " + System.getProperty("java.awt.headless"));
 
         SpringApplication.run(LudoApp.class, args);
-        //Application.launch(LudoFx.class, args);
+
+
+        new WelcomeWindow();
 
         if (GraphicsEnvironment.isHeadless()) {
             System.err.println("No graphical environment detected. GUI will not be started.");

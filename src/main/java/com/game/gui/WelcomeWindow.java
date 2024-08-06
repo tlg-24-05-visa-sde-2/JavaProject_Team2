@@ -18,7 +18,7 @@ public class WelcomeWindow extends JFrame implements ActionListener {
     private final JComboBox<String> colorBox2 = new JComboBox<>(colors);
 
     // Constructor to initialize the frame
-    WelcomeWindow() {
+    public WelcomeWindow() {
         this.setTitle("Ludo"); // Sets title
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Exits application
         this.setResizable(false); // Prevent the window from being resized
@@ -35,7 +35,7 @@ public class WelcomeWindow extends JFrame implements ActionListener {
         this.add(contentPanel, BorderLayout.CENTER); // Adds content panel to frame
         contentPanel.setBackground(new Color(100, 197, 255)); // Background color
 
-        ImageIcon image = new ImageIcon("logo/ludologo.png"); // Creates an Image icon
+        ImageIcon image = new ImageIcon("src/main/resources/ludologo.png"); // Creates an Image icon
         this.setIconImage(image.getImage()); // Changes icon
         this.getContentPane().setBackground(new Color(100, 197, 255)); // Background color
     }
@@ -67,7 +67,7 @@ public class WelcomeWindow extends JFrame implements ActionListener {
                     "Roll the dice & aim for first place!!</html>");
             label.setFont(new Font("Comic Sans MS", Font.BOLD, 15));
 
-            ImageIcon welcome = new ImageIcon("logo/ludothumbnail.jpg");
+            ImageIcon welcome = new ImageIcon("src/main/resources/ludothumbnail.jpg");
             label.setIcon(welcome);
 
             rulesBtn = new JButton("Rules"); // Rules button
@@ -164,4 +164,5 @@ public class WelcomeWindow extends JFrame implements ActionListener {
             add(backBtn, BorderLayout.SOUTH); // Add the back button to the bottom
         }
     }
-}
+    }
+
