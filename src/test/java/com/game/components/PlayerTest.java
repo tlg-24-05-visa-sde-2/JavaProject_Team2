@@ -1,34 +1,38 @@
-package com.game.components;
+package com.game.components.player;
 
-import com.game.components.player.Player;
 import com.game.utilities.TeamColor;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class wPlayerTest {
+public class PlayerTest {
 
     @Test
     public void testPlayerConstructorWithValidParameters() { // Verify the player's name and color
         Player player = new Player("El Jefe", TeamColor.RED);
-        assertEquals("El Jefe", player.getName(), "Player name should be correctly initialized");
-        assertEquals(TeamColor.RED, player.getPlayerColor(), "Player color should be correctly initialized");
+        assertEquals("El Jefe", player.getName());
+        assertEquals(TeamColor.RED, player.getPlayerColor());
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testPlayerConstructorWithEmptyStringName_shouldThrowIllegalArgumentException() {
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+        try{
             new Player("", TeamColor.RED);
-        });
-        assertEquals("Player name cannot be null or empty", exception.getMessage());
+        }
+        catch(IllegalArgumentException e){
+            assertEquals("Player name cannot be null or empty", e.getMessage());
+            throw e;
+        }
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testPlayerConstructorWithNullName_shouldThrowIllegalArgumentException() {
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+        try{
             new Player(null, TeamColor.RED);
-        });
-        assertEquals("Player name cannot be null or empty", exception.getMessage());
+        }
+        catch(IllegalArgumentException e){
+            assertEquals("Player name cannot be null or empty", e.getMessage());
+            throw e;
+        }
     }
 
     @Test
