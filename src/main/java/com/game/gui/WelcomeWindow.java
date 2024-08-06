@@ -9,7 +9,7 @@ public class WelcomeWindow extends JFrame implements ActionListener {
     JButton playBtn;
     JButton rulesBtn;
 
-    WelcomeWindow() {
+    public WelcomeWindow() {
         rulesBtn = new JButton("Rules");
         rulesBtn.setBounds(400, 320, 100, 50);
         rulesBtn.addActionListener(this);
