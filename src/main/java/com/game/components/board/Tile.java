@@ -3,30 +3,45 @@ package com.game.components.board;
 import lombok.Getter;
 
 public class Tile {
-    //accessors
-    //fields
-    @Getter
-    private int x_axis;
-    @Getter
-    private int y_axis;
-    private int coordinates;
+    private Coordinate location;
+    private components.Token occupyingToken;
+    private boolean isPathTile;
+    // Constructor
 
-    //constructor
-    public Tile() {
-        this.x_axis = x_axis;
-        this.y_axis = y_axis;
+    public Tile(int x, int y) {
+        this.location = new Coordinate(x, y);
     }
 
-    public Tile(int xAxis, int yAxis) {
+    // Getters
+    public boolean isPathTile() {
+        return isPathTile;
     }
 
-    public String getCoordinates() {
-
-        return String.format("(%s,%s)",x_axis, y_axis);
+    public void setPathTile(boolean isPathTile) {
+        this.isPathTile = isPathTile;
     }
-    
-    public void setCoordinates(int x_axis, int y_axis) {
-        this.x_axis = x_axis;
-        this.y_axis = y_axis;
+    public Coordinate getLocation() {
+        return location;
+    }
+
+    public components.Token getOccupyingToken() {
+        return occupyingToken;
+    }
+
+    public void setOccupyingToken(components.Token token) {
+        this.occupyingToken = token;
+    }
+
+    public boolean isOccupied() {
+        return occupyingToken != null;
+    }
+
+    @Override
+    public String toString() {
+        return "Tile{" +
+                "location=" +getLocation() +
+                ", occupyingToken=" + getOccupyingToken() +
+                ", isPathTile=" + getOccupyingToken() +
+                '}';
     }
 }
