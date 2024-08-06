@@ -3,53 +3,87 @@ package com.game.components.board;
 import java.nio.file.Path;
 import java.util.List;
 
-class Board {
-    //fields
-    private List<SafeZone> safeZones;
-    private List<JailZone> jailZones;
-    private List<HomeZone> homeZones;
-    private List<Path> paths;
+public class Board {
+    private Tile[][] tiles;
+    private int size;
 
-    //constructor
-    public Board(List<SafeZone> safeZones, List<JailZone> jailZones, List<HomeZone> homeZones, List<Path> paths) {
-        this.safeZones = safeZones;
-        this.jailZones = jailZones;
-        this.homeZones = homeZones;
-        this.paths = paths;
+    public Board(int size, List<TeamPath> teamPaths, List<Coordinate> trackPath) {
+        this.size = size;
+        tiles = new Tile[size][size];
+        initializeBoard(size, teamPaths, trackPath);
     }
 
-    //accessors
+    public void initializeBoard(int size, List<TeamPath> teamPaths, List<Coordinate> trackPath) {
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                tiles[i][j] = new Tile(i, j);
+                //System.out.println("Created Tile at: " + i + ", " + j);
+            }
+        }
 
+        if (trackPath != null) {
+            for (Coordinate coord : trackPath) {
+                if (coord != null) {
+                    tiles[coord.getX()][coord.getY()].setPathTile(true);
+                    // System.out.println("Set path tile at: " + coord);
+                }
+            }
+        }
 
-    public List<SafeZone> getSafeZones() {
-        return safeZones;
+        if (teamPaths != null) {
+            for (TeamPath teamPath : teamPaths) {
+                if (teamPath != null) {
+                    Coordinate startingPosition = teamPath.getStartingPosition();
+                    Coordinate triggerZone = teamPath.getTriggerZone();
+                    Coordinate homeZone = teamPath.getHomeZone();
+                    List<Coordinate> safeZone = teamPath.getSafeZone();
+                    List<Coordinate> jailZone = teamPath.getJailZone();
+
+                    if (startingPosition != null) {
+                        tiles[startingPosition.getX()][startingPosition.getY()].setPathTile(true);
+                        //System.out.println("Set starting position for " + teamPath.getTeamColor() + " at: " + startingPosition);
+                    }
+
+                    if (triggerZone != null) {
+                        tiles[triggerZone.getX()][triggerZone.getY()].setPathTile(true);
+                        //System.out.println("Set trigger zone for " + teamPath.getTeamColor() + " at: " + triggerZone);
+                    }
+
+                    if (homeZone != null) {
+                        tiles[homeZone.getX()][homeZone.getY()].setPathTile(true);
+                        //System.out.println("Set home zone for " + teamPath.getTeamColor() + " at: " + homeZone);
+                    }
+
+                    if (safeZone != null) {
+                        for (Coordinate coord : safeZone) {
+                            if (coord != null) {
+                                tiles[coord.getX()][coord.getY()].setPathTile(true);
+                                //System.out.println("Set safe zone for " + teamPath.getTeamColor() + " at: " + coord);
+                            }
+                        }
+                    }
+
+                    if (jailZone != null) {
+                        for (Coordinate coord : jailZone) {
+                            if (coord != null) {
+                                tiles[coord.getX()][coord.getY()].setPathTile(true);
+                                //System.out.println("Set jail zone for " + teamPath.getTeamColor() + " at: " + coord);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
-    public void setSafeZones(List<SafeZone> safeZones) {
-        this.safeZones = safeZones;
+    public Tile[][] getTiles() {
+        return tiles;
     }
 
-    public List<JailZone> getJailZones() {
-        return jailZones;
-    }
-
-    public void setJailZones(List<JailZone> jailZones) {
-        this.jailZones = jailZones;
-    }
-
-    public List<HomeZone> getHomeZones() {
-        return homeZones;
-    }
-
-    public void setHomeZones(List<HomeZone> homeZones) {
-        this.homeZones = homeZones;
-    }
-
-    public List<Path> getWhiteSpaces() {
-        return paths;
-    }
-
-    public void setWhiteSpaces(List<Path> paths) {
-        this.paths = paths;
+    public Tile getTile(int x, int y) {
+        if (x >= 0 && x < size && y >= 0 && y < size) {
+            return tiles[x][y];
+        }
+        return null;
     }
 }

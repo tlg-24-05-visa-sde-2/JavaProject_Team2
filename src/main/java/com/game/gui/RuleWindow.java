@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 public class RuleWindow extends JFrame {
     private JButton playBtn;
 
-    RuleWindow() {
+    public RuleWindow() {
         this.setTitle("Rules");
         this.setSize(450, 450);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

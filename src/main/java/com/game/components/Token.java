@@ -186,6 +186,9 @@
 package components;
 
 
+import com.game.components.board.Coordinate;
+import com.game.utilities.TeamColor;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;

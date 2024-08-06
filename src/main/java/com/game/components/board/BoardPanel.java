@@ -1,7 +1,10 @@
 package com.game.components.board;
 
+import com.game.components.Die;
+import com.game.controller.PathController;
 import com.game.controller.PlayerController;
-import components.Die;
+import com.game.gui.RuleWindow;
+
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
