@@ -1,16 +1,15 @@
 package com.game.components;
 
+import org.junit.Before;
+import org.junit.Test;
 import java.util.Arrays;
-import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import static org.springframework.test.util.AssertionErrors.assertTrue;
+import static org.junit.Assert.assertTrue;
 
 
 public class DieTest {
     private Die die;
 
-    @BeforeClass
+    @Before
     public void setUp() {
         die = new Die();
     }
